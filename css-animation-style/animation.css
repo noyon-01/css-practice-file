@@ -1,11 +1,168 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-html , body{
-    width: 100%;
-    height: auto;
-    scroll-behavior: smooth;
+html,
+body {
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.box-1 {
+  height: 150px;
+  width: 150px;
+  background-color: red;
+  animation-name: myAnimation1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes myAnimation1 {
+  from {
+    background-color: red;
+    transform: rotate(0deg);
+  }
+  to {
+    background-color: green;
+    transform: rotate(180deg);
+  }
+}
+
+.box-2 {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(204, 140, 2);
+  animation: colorChange 5s linear 1s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: rgb(204, 140, 2);
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: red;
+    transform: rotate(30deg);
+  }
+  75% {
+    background-color: yellow;
+    transform: rotate(55deg);
+  }
+  100% {
+    background-color: blue;
+    transform: rotate(120deg);
+  }
+}
+
+.box-3 {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  animation: rotate 4s linear 1s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box-4 {
+  width: 150px;
+  height: 150px;
+  border: 20px solid gray;
+  border-top: 20px solid blue;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.box-5 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-color: red;
+  animation-name: myAnimation2;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes myAnimation2 {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 100px;
+    top: 100px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 100px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.box-6 {
+    height: 150px;
+    width: 150px;
+    background-color: cadetblue;
+    animation: scale 5s linear 1s infinite;
+}
+
+@keyframes scale {
+    from {
+        background-color: cadetblue;
+        transform: scale(1);
+    }
+    to {
+        background-color: darkmagenta;
+        transform: scale(1.5);
+    }
 }
